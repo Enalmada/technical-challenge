@@ -1,6 +1,8 @@
 # Technical Challenge
 
-[https://nextjs-stack-example.adam-lane.vercel.app/app](https://https://nextjs-stack-example.adam-lane.vercel.app/app)
+[https://nextjs-stack-example.adam-lane.vercel.app/app](https://nextjs-stack-example.adam-lane.vercel.app/app)
+
+Note: backend api on vercel is very slow to respond.  Prod env would use dedicated express backend
 
 ## About this project
 ### Frontend
