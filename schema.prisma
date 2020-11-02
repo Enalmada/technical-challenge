@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  firebaseId  String   @unique @map(name: "firebase_id")
+  name        String?
+  email       String?
+  image       String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @default(now()) @map("updated_at")
+  tasks       Task[]  @relation("tasksTousers")
+
+  @@map("users")
+}
+
+model Task {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String?
+  status      task_status?
+  dueDate     DateTime?    @map("due_date")
+  userId      Int          @map("user_id")
+  createdAt   DateTime     @default(now()) @map("created_at")
+  updatedAt   DateTime     @default(now()) @map("updated_at")
+  users       User         @relation("tasksTousers", fields: [userId], references: [id])
+
+  @@map("tasks")
+}
+
+enum task_status {
+  NEW
+  COMPLETED
+}

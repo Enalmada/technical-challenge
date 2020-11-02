@@ -1,0 +1,11 @@
+# https://github.com/apollographql/apollo-tooling/issues/366#issuecomment-422518073
+# This shouldn't be necessary but I had to create this file
+# https://github.com/apollographql/apollo-tooling/issues/366#issuecomment-440773795
+
+extend type Query {
+    version: LocalType!
+}
+
+type LocalType {
+    backend: String!
+}

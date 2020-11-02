@@ -1,0 +1,9 @@
+# https://github.com/serverless-nextjs/serverless-next.js
+# Config sample if you wanted to deploy using serverless-next
+technicalChallenge:
+  component: "@sls-next/serverless-component@1.18.0-alpha.27"
+  inputs:
+    memory:
+      defaultLambda: 2048
+      apiLambda: 2048
+    useServerlessTraceTarget: true
