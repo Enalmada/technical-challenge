@@ -20,12 +20,12 @@ export const checkUserAuthentication = async (ctx) => {
         // const json = await res.json()
 
         if (!cookies?.token) {
-            return {};
+            return { auth: false };
         }
 
         return { auth: true };
     } catch (err) {
-        return {};
+        return { auth: false };
     }
 };
 

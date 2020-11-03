@@ -14,13 +14,13 @@ export function AuthProvider({ children }: any) {
         return firebaseClient.auth().onIdTokenChanged(async (user) => {
             if (!user) {
                 setUser(null);
-                nookies.set(undefined, "token", "", {});
+                nookies.destroy(undefined, "token", { path: "/" });
                 return;
             }
 
             const token = await user.getIdToken();
             setUser(user);
-            nookies.set(undefined, "token", token, {});
+            nookies.set(undefined, "token", token, { path: "/" });
         });
     }, []);
 

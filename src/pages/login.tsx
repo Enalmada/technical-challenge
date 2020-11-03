@@ -4,11 +4,11 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import React from "react";
 import { useForm } from "react-hook-form";
+import Layout from "src/components/layout/Layout";
+import { checkUserAuthentication } from "src/components/withPrivateRoute";
 import { firebaseClient } from "src/utils/auth/firebaseClient";
 import * as yup from "yup";
 
-import Layout from "../components/layout/Layout";
-import { checkUserAuthentication } from "../components/withPrivateRoute";
 import { getRouteById } from "../utils/routes";
 
 type FormData = {
@@ -218,9 +218,9 @@ Login.getInitialProps = async (ctx) => {
         } else {
             await Router.replace(location);
         }
+    } else {
+        return {};
     }
-
-    return {};
 };
 
 export default Login;
