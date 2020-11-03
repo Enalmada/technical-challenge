@@ -3,6 +3,12 @@ import App from "next/app";
 import Head from "next/head";
 import React from "react";
 
+// Next.js specific apollo interface.
+// Almost exactly from an old Next.js example before it was over simplified
+// https://github.com/vercel/next.js/blob/canary/examples/with-apollo/lib/apolloClient.js
+// To maintain and upgrade, see the following:
+// https://unlyed.github.io/next-right-now/available-presets/v2-mst-aptd-gcms-lcz-sty
+// https://graphql-code-generator.com/docs/plugins/typescript-apollo-next
 import createApolloClient from "./apolloClient";
 
 // On the client, we store the Apollo Client in the following variable.

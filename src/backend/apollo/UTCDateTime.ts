@@ -1,6 +1,9 @@
 import { GraphQLScalarType } from "graphql";
 import { Kind } from "graphql/language";
 
+/*
+    DateTime UTC Support
+ */
 export default new GraphQLScalarType({
     name: "UTCDateTime",
     description: "UTC DateTime custom scalar type",

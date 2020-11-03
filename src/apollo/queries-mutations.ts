@@ -17,45 +17,41 @@ export const EMAIL_TEMPLATE = gql`
     }
 `;
 
-// TODO: turn tasks into fragment
+export const TASK_PARTS = gql`
+    fragment TaskParts on Task {
+        id
+        title
+        description
+        dueDate
+        status
+        createdAt
+        updatedAt
+    }
+`;
+
 export const TASKS = gql`
     query Tasks {
         tasks {
-            id
-            title
-            description
-            dueDate
-            status
-            createdAt
-            updatedAt
+            ...TaskParts
         }
     }
+    ${TASK_PARTS}
 `;
 
 export const UPSERT_TASK = gql`
     mutation UpsertTask($input: TaskInput!) {
         upsertTask(input: $input) {
-            id
-            title
-            description
-            dueDate
-            status
-            createdAt
-            updatedAt
+            ...TaskParts
         }
     }
+    ${TASK_PARTS}
 `;
 
 export const DELETE_TASK = gql`
     mutation DeleteTask($id: Int!) {
         deleteTask(id: $id) {
-            id
-            title
-            description
-            dueDate
-            status
-            createdAt
-            updatedAt
+            ...TaskParts
         }
     }
+    ${TASK_PARTS}
 `;

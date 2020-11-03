@@ -15,6 +15,9 @@ import { parseCookies } from "nookies";
 import { resolvers, typeDefs } from "./resolvers";
 import typePolicies from "./typePolicies";
 
+// This is the apollo client setup
+
+// createPersistedQueryLink only works on permanent routes
 // import { createPersistedQueryLink } from "apollo-link-persisted-queries";
 
 // TODO - get token on backend out of server only cookie

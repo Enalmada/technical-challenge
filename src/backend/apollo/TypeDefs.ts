@@ -1,5 +1,9 @@
 import { gql } from "apollo-server-micro";
 
+/*
+    Consider using graphql-tools to convert this into a schema.graphql file
+    https://www.graphql-tools.com/docs/migration-from-import/
+ */
 const TypeDefs = gql`
     scalar UTCDateTime
 

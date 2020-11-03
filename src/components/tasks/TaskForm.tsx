@@ -216,6 +216,7 @@ const DeleteTaskButton: FC<{ id?: number }> = (props) => {
         <>
             {props.id && (
                 <button
+                    type="button"
                     className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200 p-5"
                     onClick={async () => {
                         try {

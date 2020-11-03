@@ -70,3 +70,13 @@ See schema.prisma for mapping
 * delete confirmation
 * textarea autoexpand
 
+## Notes
+
+### Auth
+[NextAuth](https://next-auth.js.org/getting-started/introduction#secure-by-default) has the most robust implementation 
+I have seen.  I would recommend starting there if you only needed a web api.  However, it currently is difficult to use
+from other places like mobile to use firebase directly. 
+
+### Other Boilerplates
+[Next Right Now](https://github.com/UnlyEd/next-right-now) has great examples on how to do some things production ready.
+

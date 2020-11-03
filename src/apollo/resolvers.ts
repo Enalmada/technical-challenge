@@ -1,3 +1,5 @@
+// Used to refresh client on backend change
+
 export const typeDefs = `
     type Query {
       version: {
