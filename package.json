@@ -29,7 +29,8 @@
     "test:unit": "jest",
     "test:unit:coverage": "jest --coverage",
     "test:unit:ui": "env-cmd -f .env.local cross-env NODE_ENV=test majestic",
-    "test:unit:update": "jest --updateSnapshot"
+    "test:unit:update": "jest --updateSnapshot",
+    "devserver": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 node server.js"
   },
   "dependencies": {
     "@apollo/client": "^3.2.5",
@@ -43,7 +44,9 @@
     "apollo-link-timeout": "^3.0.0",
     "apollo-server-micro": "^2.19.0",
     "apollo-upload-client": "^14.1.2",
+    "cors": "^2.8.5",
     "date-fns": "^2.16.1",
+    "express": "^4.17.1",
     "firebase": "^7.24.0",
     "firebase-admin": "^9.3.0",
     "graphql": "^15.4.0",
