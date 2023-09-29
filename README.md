@@ -1,3 +1,7 @@
+Note: archived due to this now being the recommended stack
+https://github.com/Enalmada/nextjs-boilerplate
+
+
 # Technical Challenge
 
 [https://nextjs-stack-example.adam-lane.vercel.app/app](https://nextjs-stack-example.adam-lane.vercel.app/app)
